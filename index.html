@@ -1,0 +1,419 @@
+[<section id="liverate">
+<div class="container">
+<h2>Live Rate</h2>
+<div class="inner_section">
+<div class="row">
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+<table class="table table-bordered table-responsive table-condensed" id="bidasktable" style="margin-bottom: 2px; width:100%">
+<thead>
+<tr class="part1_header">
+<th align="center" width="24%">Description</th>
+<th align="center" width="19%">Bid</th>
+<th align="center" width="19%">Ask</th>
+<th align="center" width="19%">High</th>
+<th align="center" width="19%">Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GOLD ($)</td>
+<td class="ratevalue2"><div data-field="bid" data-grid="bidaskrates" data-item="SPOT-GOLD" data-source="lightstreamer" id="gold_bid">-</div></td>
+<td class="ratevalue2"><div data-field="ask" data-grid="bidaskrates" data-item="SPOT-GOLD" data-source="lightstreamer" id="gold_ask">-</div></td>
+<td class="ratevalue2"><div data-field="high" data-grid="bidaskrates" data-item="SPOT-GOLD" data-source="lightstreamer">-</div></td>
+<td class="ratevalue2"><div data-field="low" data-grid="bidaskrates" data-item="SPOT-GOLD" data-source="lightstreamer">-</div></td>
+</tr>
+<tr>
+<td>SILVER ($)</td>
+<td class="ratevalue2"><div data-field="bid" data-grid="bidaskrates" data-item="SPOT-SILVER" data-source="lightstreamer" id="silver_bid">-</div></td>
+<td class="ratevalue2"><div data-field="ask" data-grid="bidaskrates" data-item="SPOT-SILVER" data-source="lightstreamer" id="silver_ask">-</div></td>
+<td class="ratevalue2"><div data-field="high" data-grid="bidaskrates" data-item="SPOT-SILVER" data-source="lightstreamer">-</div></td>
+<td class="ratevalue2"><div data-field="low" data-grid="bidaskrates" data-item="SPOT-SILVER" data-source="lightstreamer">-</div></td>
+</tr>
+<tr>
+<td>INR (<i class="fa fa-inr"></i>)</td>
+<td class="ratevalue2"><div data-field="bid" data-grid="bidaskrates" data-item="SPOT-INR" data-source="lightstreamer" id="inr_bid">-</div></td>
+<td class="ratevalue2"><div data-field="ask" data-grid="bidaskrates" data-item="SPOT-INR" data-source="lightstreamer" id="inr_ask">-</div></td>
+<td class="ratevalue2"><div data-field="high" data-grid="bidaskrates" data-item="SPOT-INR" data-source="lightstreamer">-</div></td>
+<td class="ratevalue2"><div data-field="low" data-grid="bidaskrates" data-item="SPOT-INR" data-source="lightstreamer">-</div></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered">
+<thead>
+<tr class="part1_header">
+<th align="center" width="24%">Description</th>
+<th align="center" width="19%">Bid</th>
+<th align="center" width="19%">Ask</th>
+<th align="center" width="19%">High</th>
+<th align="center" width="19%">Low</th>
+</tr>
+</thead>
+<tbody class="table_over" style="font-size: 13px;">
+<tr class="table2"><td>GOLD </td> <td class="ratevalue1"><div class="txtlabel GOLDAPR_bid" data-field="bid" data-grid="bidaskrates" data-item="GOLDAPR" data-source="lightstreamer" id="GOLDAPR_bid">-</div></td><td class="ratevalue1"><div class="txtlabel GOLDAPR_ask" data-field="ask" data-grid="bidaskrates" data-item="GOLDAPR" data-source="lightstreamer" id="GOLDAPR_ask">-</div> </td><td class="ratevalue2"><div data-field="high" data-grid="bidaskrates" data-item="GOLDAPR" data-source="lightstreamer">-</div> </td><td class="ratevalue2"><div data-field="low" data-grid="bidaskrates" data-item="GOLDAPR" data-source="lightstreamer">-</div> </td></tr><tr class="table2"><td>SILVER  </td> <td class="ratevalue1"><div class="txtlabel SILVERMAR_bid" data-field="bid" data-grid="bidaskrates" data-item="SILVERMAR" data-source="lightstreamer" id="SILVERMAR_bid">-</div></td><td class="ratevalue1"><div class="txtlabel SILVERMAR_ask" data-field="ask" data-grid="bidaskrates" data-item="SILVERMAR" data-source="lightstreamer" id="SILVERMAR_ask">-</div> </td><td class="ratevalue2"><div data-field="high" data-grid="bidaskrates" data-item="SILVERMAR" data-source="lightstreamer">-</div> </td><td class="ratevalue2"><div data-field="low" data-grid="bidaskrates" data-item="SILVERMAR" data-source="lightstreamer">-</div> </td></tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+<div id="divrate" style="">
+<table class="table table-bordered" id="liveratetable" style="margin-bottom: 10px; width:100%">
+<thead>
+<tr>
+<th>COMMODITY</th>
+<th>SELLING RATE</th>
+<th style="display:none;">DELIVERY DATE</th>
+<label align="center" class="connectionmsg" id="connectionmsg" style="display: none; color: rgb(204, 0, 0); margin-top: 54px; font-size:32px; background-color:#000000; position:absolute; line-height:86px;"></label>
+</tr>
+</thead>
+<tbody>
+<tr id="liverates">
+<td>Gold 10G RTGS</td>
+<td class="table_data"></td>
+<td style="display:none;">
+<div class="com_id">24</div>
+<div class="com_type">0</div>
+<div class="com_weight">10.000</div>
+<div class="com_other_charges">0.00</div>
+<div class="com_correction_type">1.00</div>
+<div class="com_sel_premium">0.00</div>
+<div class="com_buy_premium">0.00</div>
+<div class="com_premium_type">0</div>
+<div class="com_sel_active">1</div>
+<div class="com_buy_active">0</div>
+<div class="com_delverydays">0</div>
+<div class="com_isregion">0</div>
+<div class="com_calpurity">0</div>
+<div class="com_tax">0.00</div>
+<div class="com_octroi">0.00</div>
+<div class="com_stamduty">0.00</div>
+<div class="deliverydays">08-03-2021</div>
+<div class="displyname">Gold-2</div>
+<div class="mcxsymbol">12</div>
+<div class="banksymbol">1</div>
+<div class="rcomid">2</div>
+<div class="trade_type">0</div>
+<div class="sell_diff">1450.00</div>
+<div class="buy_diff">1000.00</div>
+<div class="sell_rate">46241.00</div>
+<div class="com_display_purity">0</div>
+<div class="com_roundoff">0</div>
+<div class="com_is_coin">0</div>
+<div class="prem_comsell_active">1</div>
+<div class="prem_combuy_active">1</div>
+</td>
+</tr>
+<tr id="liverates">
+<td>SILVER PETI 1KG</td>
+<td class="table_data"></td>
+<td style="display:none;">
+<div class="com_id">20</div>
+<div class="com_type">1</div>
+<div class="com_weight">1000.000</div>
+<div class="com_other_charges">0.00</div>
+<div class="com_correction_type">1.00</div>
+<div class="com_sel_premium">0.00</div>
+<div class="com_buy_premium">0.00</div>
+<div class="com_premium_type">0</div>
+<div class="com_sel_active">1</div>
+<div class="com_buy_active">0</div>
+<div class="com_delverydays">0</div>
+<div class="com_isregion">0</div>
+<div class="com_calpurity">0</div>
+<div class="com_tax">0.00</div>
+<div class="com_octroi">0.00</div>
+<div class="com_stamduty">0.00</div>
+<div class="deliverydays">08-03-2021</div>
+<div class="displyname">Silver-1</div>
+<div class="mcxsymbol">6</div>
+<div class="banksymbol">2</div>
+<div class="rcomid">4</div>
+<div class="trade_type">0</div>
+<div class="sell_diff">2800.00</div>
+<div class="buy_diff">600.00</div>
+<div class="sell_rate">67724.00</div>
+<div class="com_display_purity">0</div>
+<div class="com_roundoff">0</div>
+<div class="com_is_coin">0</div>
+<div class="prem_comsell_active">1</div>
+<div class="prem_combuy_active">1</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="lastupdate" style="display:none;">
+<strong>Last Updated Time: <strong><span data-field="updatetime" data-grid="bidaskrates" data-item="Marketstatus" data-source="lightstreamer" id="gold_updatetime">-</span>
+</strong></strong></div>
+<div class="lastupdate">
+<strong>Last Updated Time: </strong><span id="late_updatetime">-</span>
+</div>
+<input id="updatetime" name="updatetime" type="hidden" value=""/>
+<input id="userupdatetime" name="userupdatetime" type="hidden" value=""/>
+</div>
+</div>
+<p align="center" class="connectionmsg" id="connectionmsg" style="display: none; color: rgb(204, 0, 0); margin-top: -30px; border-right-width: 21px; border-left-width: 37px; font-size:32px; background-color:#000 !important;">Please check your internet connection</p>
+<div align="center" class="messagebox" id="messagebox" style="display:none;">
+<table border="0" height="170px" style="border-top:0px;" width="500px">
+<tr height="100px">
+<td align="center" class="messageboxtext" id="messageboxtext" style=""></td>
+</tr>
+</table>
+</div>
+<div align="center" class="onoffmessage" id="onoffmessage" style="display:none;">
+<table border="0" height="250px" width="500px">
+<tr height="50px">
+<td align="center" id="onoffmessagetext" style="color:#000 !important;"> Please wait market will be open shortly.</td>
+</tr>
+</table>
+</div>
+<div style="display:none;">
+<div class="market_closed">0</div>
+<div class="rate_display">1</div>
+</div>
+<div style="display:none;">
+<table border="0" cellpadding="0" cellspacing="0" class="displaycontract" id="table1">
+<thead>
+<tr class="title">
+<td class="titleheading1">Symbol</td>
+<td>Bid</td>
+<td>Ask</td>
+<td>High</td>
+<td>Low</td>
+</tr>
+</thead>
+<tbody>
+<tr><td class="rateheading">GOLD ($)<input name="fv[rpcontract][SPOT-GOLD][contract]" type="hidden" value="9"/></td><td><div class="txtlabel SPOT-GOLD_bid" data-field="bid" data-grid="bidaskrates" data-item="SPOT-GOLD" data-source="lightstreamer" id="SPOT-GOLD_bid">-</div></td><td><div class="txtlabel SPOT-GOLD_ask" data-field="ask" data-grid="bidaskrates" data-item="SPOT-GOLD" data-source="lightstreamer" id="SPOT-GOLD_ask">-</div></td><td><div class="txtlabel SPOT-GOLD_high" data-field="high" data-grid="bidaskrates" data-item="SPOT-GOLD" data-source="lightstreamer" id="SPOT-GOLD_high">-</div></td><td><div class="txtlabel SPOT-GOLD_low" data-field="low" data-grid="bidaskrates" data-item="SPOT-GOLD" data-source="lightstreamer" id="SPOT-GOLD_low">-</div></td></tr><tr><td class="rateheading">SILVER ($)<input name="fv[rpcontract][SPOT-SILVER][contract]" type="hidden" value="10"/></td><td><div class="txtlabel SPOT-SILVER_bid" data-field="bid" data-grid="bidaskrates" data-item="SPOT-SILVER" data-source="lightstreamer" id="SPOT-SILVER_bid">-</div></td><td><div class="txtlabel SPOT-SILVER_ask" data-field="ask" data-grid="bidaskrates" data-item="SPOT-SILVER" data-source="lightstreamer" id="SPOT-SILVER_ask">-</div></td><td><div class="txtlabel SPOT-SILVER_high" data-field="high" data-grid="bidaskrates" data-item="SPOT-SILVER" data-source="lightstreamer" id="SPOT-SILVER_high">-</div></td><td><div class="txtlabel SPOT-SILVER_low" data-field="low" data-grid="bidaskrates" data-item="SPOT-SILVER" data-source="lightstreamer" id="SPOT-SILVER_low">-</div></td></tr><tr><td class="rateheading">INR<input name="fv[rpcontract][SPOT-INR][contract]" type="hidden" value="11"/></td><td><div class="txtlabel SPOT-INR_bid" data-field="bid" data-grid="bidaskrates" data-item="SPOT-INR" data-source="lightstreamer" id="SPOT-INR_bid">-</div></td><td><div class="txtlabel SPOT-INR_ask" data-field="ask" data-grid="bidaskrates" data-item="SPOT-INR" data-source="lightstreamer" id="SPOT-INR_ask">-</div></td><td><div class="txtlabel SPOT-INR_high" data-field="high" data-grid="bidaskrates" data-item="SPOT-INR" data-source="lightstreamer" id="SPOT-INR_high">-</div></td><td><div class="txtlabel SPOT-INR_low" data-field="low" data-grid="bidaskrates" data-item="SPOT-INR" data-source="lightstreamer" id="SPOT-INR_low">-</div></td></tr><tr><td class="rateheading">GOLD-F<input name="fv[rpcontract][GOLDJUN][contract]" type="hidden" value="13"/></td><td><div class="txtlabel GOLDJUN_bid" data-field="bid" data-grid="bidaskrates" data-item="GOLDJUN" data-source="lightstreamer" id="GOLDJUN_bid">-</div></td><td><div class="txtlabel GOLDJUN_ask" data-field="ask" data-grid="bidaskrates" data-item="GOLDJUN" data-source="lightstreamer" id="GOLDJUN_ask">-</div></td><td><div class="txtlabel GOLDJUN_high" data-field="high" data-grid="bidaskrates" data-item="GOLDJUN" data-source="lightstreamer" id="GOLDJUN_high">-</div></td><td><div class="txtlabel GOLDJUN_low" data-field="low" data-grid="bidaskrates" data-item="GOLDJUN" data-source="lightstreamer" id="GOLDJUN_low">-</div></td></tr><tr><td class="rateheading">GOLD-C<input name="fv[rpcontract][GOLDAPR][contract]" type="hidden" value="12"/></td><td><div class="txtlabel GOLDAPR_bid" data-field="bid" data-grid="bidaskrates" data-item="GOLDAPR" data-source="lightstreamer" id="GOLDAPR_bid">-</div></td><td><div class="txtlabel GOLDAPR_ask" data-field="ask" data-grid="bidaskrates" data-item="GOLDAPR" data-source="lightstreamer" id="GOLDAPR_ask">-</div></td><td><div class="txtlabel GOLDAPR_high" data-field="high" data-grid="bidaskrates" data-item="GOLDAPR" data-source="lightstreamer" id="GOLDAPR_high">-</div></td><td><div class="txtlabel GOLDAPR_low" data-field="low" data-grid="bidaskrates" data-item="GOLDAPR" data-source="lightstreamer" id="GOLDAPR_low">-</div></td></tr><tr><td class="rateheading">SILVER-C<input name="fv[rpcontract][SILVERMAR][contract]" type="hidden" value="6"/></td><td><div class="txtlabel SILVERMAR_bid" data-field="bid" data-grid="bidaskrates" data-item="SILVERMAR" data-source="lightstreamer" id="SILVERMAR_bid">-</div></td><td><div class="txtlabel SILVERMAR_ask" data-field="ask" data-grid="bidaskrates" data-item="SILVERMAR" data-source="lightstreamer" id="SILVERMAR_ask">-</div></td><td><div class="txtlabel SILVERMAR_high" data-field="high" data-grid="bidaskrates" data-item="SILVERMAR" data-source="lightstreamer" id="SILVERMAR_high">-</div></td><td><div class="txtlabel SILVERMAR_low" data-field="low" data-grid="bidaskrates" data-item="SILVERMAR" data-source="lightstreamer" id="SILVERMAR_low">-</div></td></tr> </tbody>
+</table>
+</div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div id="messagebox" style="display:none;">
+<div id="messageboxtext"></div>
+</div>
+<div align="center" id="onoffmessage" style="display: none; vertical-align:middle;height:150px;">
+<div id="onoffmessage"><div data-field="msg" data-grid="bidaskrates" data-item="Marketstatus" data-source="lightstreamer">-</div></div>
+</div>
+</div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="disclaimer">
+<h4>DISCLAIMER</h4>
+<p>HRDK live rates provides gold &amp; silver prices obtained from various sources believed to be reliable, but we do not guarantee their accuracy. Our gold &amp; silver price data are provided without warranty or claim of reliability. It is accepted by the site visitor on the condition that errors or omissions shall not be made the basis for any claim, demand or cause for action.</p>
+</div>
+</div>
+</div>
+</section>]
+gold for pune from policybazaar 
+
+[<div class="trande_table">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<thead>
+<td rowspan="3"> </td>
+<td>22-Carat</td>
+<td>24-Carat</td>
+<td>Change(%)</td>
+</thead>
+<tbody>
+<tr>
+<td>Yesterday</td>
+<td>4352.00</td>
+<td>4452.00</td>
+<td>0 %</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>Today</td>
+<td>4351.00</td>
+<td>4451.00</td>
+<td>0 %</td>
+</tr>
+</tbody>
+</table>
+</div>, <div class="trande_table">
+<h2 class="blue tabletitle">Today 24 Carat Gold Price per gram in Pune (INR)</h2> <table border="0" cellpadding="0" cellspacing="0" width="100%">
+<thead>
+<td>Gram</td>
+<td>24 Carat Gold Yesterday</td><td>24 Carat Gold Today</td> <td>Daily Price Change</td>
+</thead>
+<tbody>
+<tr>
+<td>1 Gram</td>
+<td id="Yesterday_24">Rs 4452.00</td><td id="Today_24">Rs 4451.00</td>
+<td id="dpc_24"></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>8 Gram</td>
+<td>Rs 35616</td><td>Rs 35608</td>
+<td id="dpc8_24"></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>10 Gram</td>
+<td>Rs 44520</td><td>Rs 44510</td>
+<td id="dpc10_24"></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>100 Gram</td>
+<td>Rs 445200</td><td>Rs 445100</td>
+<td id="dpc100_24"></td>
+</tr>
+</tbody>
+</table>
+</div>, <div class="trande_table">
+<h2 class="blue tabletitle">Today 22 Carat Gold Price per gram in Pune (INR)</h2> <table border="0" cellpadding="0" cellspacing="0" width="100%">
+<thead>
+<td>Gram</td>
+<td>22 Carat Gold Yesterday</td><td>22 Carat Gold Today</td> <td>Daily Price Change</td>
+</thead>
+<tbody>
+<tr>
+<td>1 Gram</td>
+<td id="Yesterday_22">Rs 4352.00</td><td id="Today_22">Rs 4351.00</td>
+<td id="dpc_22"></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>8 Gram</td>
+<td>Rs 34816</td><td>Rs 34808</td>
+<td id="dpc8_22"></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>10 Gram</td>
+<td>Rs 43520</td><td>Rs 43510</td>
+<td id="dpc10_22"></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>100 Gram</td>
+<td>Rs 435200</td><td>Rs 435100</td>
+<td id="dpc100_22"></td>
+</tr>
+</tbody>
+</table>
+</div>]
+gold for pune from goodreturns 
+
+[<div class="gold_silver_table right-align-content">
+<table border="0" cellpadding="1" cellspacing="1" width="100%">
+<tr class="first">
+<td class="heading">Gram</td>
+<td class="heading">22 Carat Gold <br/> Today</td>
+<td class="heading">22 Carat Gold <br/> Yesterday</td>
+<td class="heading">Daily Price Change </td>
+</tr>
+<tr class="odd_row">
+<td>1 gram</td>
+<td><i class="inr-symbol-icon">₹ </i>4,353</td>
+<td><i class="inr-symbol-icon">₹ </i>4,352</td>
+<td>
+<span class="gold_silver_gain">
+<i class="inr-symbol-icon">₹ </i>1
+									</span>
+</td>
+</tr>
+<tr class="even_row">
+<td>8 gram</td>
+<td><i class="inr-symbol-icon">₹ </i>34,824</td>
+<td><i class="inr-symbol-icon">₹ </i>34,816</td>
+<td>
+<span class="gold_silver_gain">
+<i class="inr-symbol-icon">₹ </i>8
+									</span>
+</td>
+</tr>
+<tr class="odd_row">
+<td>10 gram</td>
+<td><i class="inr-symbol-icon">₹ </i>43,530</td>
+<td><i class="inr-symbol-icon">₹ </i>43,520</td>
+<td>
+<span class="gold_silver_gain">
+<i class="inr-symbol-icon">₹ </i>10
+									</span>
+</td>
+</tr>
+<tr class="even_row">
+<td>100 gram</td>
+<td><i class="inr-symbol-icon">₹ </i>4,35,300</td>
+<td><i class="inr-symbol-icon">₹ </i>4,35,200</td>
+<td>
+<span class="gold_silver_gain">
+<i class="inr-symbol-icon">₹ </i>100
+									</span>
+</td>
+</tr>
+<!--								<tr>
+									<td colspan="4">
+										<div class="same-city-link">
+											
+											<a href="/silver-rates/pune.html">
+												Check Silver Rate Of  Pune
+											</a>
+										</div>
+									</td>
+								</tr>
+-->
+</table>
+<div class="same-city-link">
+<a href="/silver-rates/pune.html">
+									
+									 Check silver rate  in Pune
+								</a>
+</div>
+</div>, <div class="gold_silver_table right-align-content">
+<table border="0" cellpadding="1" cellspacing="1" width="100%">
+<tr class="first">
+<td class="heading">Gram</td>
+<td class="heading">24 Carat Gold <br/> Today</td>
+<td class="heading">24 Carat Gold <br/> Yesterday</td>
+<td class="heading">Daily Price Change </td>
+</tr>
+<tr class="odd_row">
+<td>1 gram</td>
+<td><i class="inr-symbol-icon">₹ </i>4,453</td>
+<td><i class="inr-symbol-icon">₹ </i>4,452</td>
+<td>
+<span class="gold_silver_gain">
+<i class="inr-symbol-icon">₹ </i>1
+									</span>
+</td>
+</tr>
+<tr class="even_row">
+<td>8 gram</td>
+<td><i class="inr-symbol-icon">₹ </i>35,624</td>
+<td><i class="inr-symbol-icon">₹ </i>35,616</td>
+<td>
+<span class="gold_silver_gain">
+<i class="inr-symbol-icon">₹ </i>8
+									</span>
+</td>
+</tr>
+<tr class="odd_row">
+<td>10 gram</td>
+<td><i class="inr-symbol-icon">₹ </i>44,530</td>
+<td><i class="inr-symbol-icon">₹ </i>44,520</td>
+<td>
+<span class="gold_silver_gain">
+<i class="inr-symbol-icon">₹ </i>10
+									</span>
+</td>
+</tr>
+<tr class="even_row">
+<td>100 gram</td>
+<td><i class="inr-symbol-icon">₹ </i>4,45,300</td>
+<td><i class="inr-symbol-icon">₹ </i>4,45,200</td>
+<td>
+<span class="gold_silver_gain">
+<i class="inr-symbol-icon">₹ </i>100
+									</span>
+</td>
+</tr>
+</table>
+</div>]

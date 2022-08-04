@@ -114,4 +114,4 @@ def get_price(type, name):
             print('not available \n')
 
 
-# get_price('gold', 'pune')
+get_price('gold', 'pune')
